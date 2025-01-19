@@ -2,15 +2,8 @@ name: Build and Publish Wheel Package
 
 on:
   push:
-    branches:
-      - main  # или любая другая ветка, которую хотите отслеживать
-    paths:
-      - '**/*.py'
-      - 'setup.py'
-      - 'pyproject.toml'
-  pull_request:
-    branches:
-      - main
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -37,3 +30,10 @@ jobs:
     - name: Build package
       run: |
         python setup.py sdist bdist_wheel
+    # Шаг 5: Создаем релиз на GitHub
+    - name: Create GitHub release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        files: dist/*.whl  # Загружаем только .whl файлы из dist/
