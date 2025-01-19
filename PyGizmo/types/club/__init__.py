@@ -8,13 +8,14 @@ from ..user import Sex
 from requests import Session
 from requests.auth import HTTPBasicAuth
 
+
 class ClubType:
     def __init__(self, apiUri: str, username: str, password: str):
         self.apiUri: str = apiUri
         self.username: str = username
         self.session: Session
         self.session.auth = HTTPBasicAuth(username, password)
-    
+
     @property
     def reservations(self) -> List[ReservationType]:
         """Return all Reservation in Club"""
@@ -22,11 +23,11 @@ class ClubType:
     @property
     def hosts(self) -> List[HostType]:
         """Return all Hosts in Club"""
-    
+
     @property
-    def usergroups(self) ->  List[UserGroupType]:
+    def usergroups(self) -> List[UserGroupType]:
         """Return all UserGroups in Club"""
-        
+
     def getUserGroup(self, userGroupId: int) -> UserGroupType:
         """Return one UserGroup
         Args:
@@ -39,16 +40,16 @@ class ClubType:
             phoneNumber: str = None,
             userId: str = None,
             identification: str = None,
-        ) -> UserMemberType:
+    ) -> UserMemberType:
         """Return User object from GizmoServer
-        
+
         Args:
         username: str # Username of User
         phoneNumber: str # Phone number without '+' of User
         userId: int # ID of User
         identification: str # ID field from Gizmo Manager of User
         """
-        
+
     def getHost(self, hostNumber: int = None, hostId: int = None) -> HostType:
         """Return Host object
 
@@ -72,9 +73,9 @@ class ClubType:
             mobilePhone: str = None,
             sex: Sex = None,
             identification: str = None
-        ) -> None:
+    ) -> None:
         """Create User on GizmoServer
-        
+
         Args:
         username: str,
         userGroupId: int,

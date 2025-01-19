@@ -2,6 +2,7 @@ from datetime import datetime
 from .BillingOption import BillingOptions
 from .Sex import Sex
 
+
 class UserMemberType():
     id: int
     sex: Sex

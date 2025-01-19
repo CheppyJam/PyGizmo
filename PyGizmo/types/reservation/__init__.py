@@ -4,6 +4,7 @@ from typing import List
 from ..user import UserMemberType
 from ..host import HostType
 
+
 class ReservationType:
     id: int
     userId: int

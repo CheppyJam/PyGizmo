@@ -1,3 +1,3 @@
-from  .user import addUser
+from .user import addUser
 
 __all__ = ['addUser']

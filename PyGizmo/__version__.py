@@ -1,6 +1,6 @@
 __title__ = "PyGizmo"
 __description__ = "Gizmo API 1.0 wrapper"
-__url__ = "https://cheppyjam.ru"
+__url__ = "https://github.com/CheppyJam/PyGizmo/"
 __version__ = "0.0.1"
 __author__ = "SherryJam"
-__author_email__ = "chep@spworlds.ri"
+__author_email__ = "chep@spworlds.ru"

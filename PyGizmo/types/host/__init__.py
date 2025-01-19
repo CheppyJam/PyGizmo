@@ -1,6 +1,7 @@
 from .HostStatus import HostStatus
 from datetime import datetime
 
+
 class HostType:
     id: int
     name: str
@@ -17,10 +18,10 @@ class HostType:
 
     def lock(self) -> None:
         """Lock the Host"""
-    
+
     def unlock(self) -> None:
         """Unlock the Host"""
-    
+
     @property
     def status(self) -> HostStatus:
         """Return HostStatus
@@ -30,4 +31,3 @@ class HostType:
         LOCKED = 2: int
         BROKEN = 3: int
         """
-    

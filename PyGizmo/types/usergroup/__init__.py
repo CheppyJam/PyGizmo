@@ -6,6 +6,7 @@ from ..user.BillingOption import BillingOptions
 from .UserInfoTypes import UserInfoTypes
 from datetime import datetime
 
+
 class UserGroupType:
     id: int
     name: str
