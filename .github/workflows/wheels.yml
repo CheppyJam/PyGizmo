@@ -37,7 +37,7 @@ jobs:
         git tag $TAG_NAME
         git push origin $TAG_NAME
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN_GIT }}
 
     # Шаг 6: Создаем релиз на GitHub
     - name: Create GitHub release
