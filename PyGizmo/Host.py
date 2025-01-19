@@ -9,6 +9,7 @@ class Host(HostType):
         self.gizmo = gizmo
         self.server = gizmo.session
         self.apiUri = gizmo.apiUri
+        
         self.data = data
         def returnGroup():
             groupsName: list = self.server.get(f'{self.apiUri}/api/hostgroups').json()['result']
