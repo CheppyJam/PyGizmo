@@ -1,0 +1,5 @@
+build/
+dist/
+PyGizmo.egg-info/
+venv/
+__pycache__
